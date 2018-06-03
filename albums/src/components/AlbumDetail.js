@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const AlbumDetail = ({ albumDetails }) => {
     const { title, artist, thumbnail_image, image, url } = albumDetails;
@@ -28,7 +29,7 @@ const AlbumDetail = ({ albumDetails }) => {
             />
         </CardSection>
         <CardSection>
-            <Button title='Buy Now' color='blue' accessibilityLabel='Click here to buy the album' />
+            <Button onPress={() => console.log(title)} />
         </CardSection>
     </Card>
    );
@@ -55,9 +56,6 @@ const styles = {
     imageStyle: {
         height: 300,
         flex: 1
-    },
-    imageViewStyle: {
-        
     }
 };
 
